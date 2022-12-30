@@ -18,8 +18,7 @@ const App = () => {
       <RoadMap />
       <FAQ />
       <BlogArticle />
-    </div>
-  );
-}
+      </div>
+) }
 
 export default App;
