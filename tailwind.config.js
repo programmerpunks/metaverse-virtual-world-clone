@@ -18,6 +18,7 @@ module.exports = {
         'yelloww': '#feeb1a',
         'blue-dark': '#024add',
         'blue-light': '#01a3f4',
+        'dull-yellow': '#af8b1d',
       },
     },
   },

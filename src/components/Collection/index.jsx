@@ -24,7 +24,9 @@ const Collection = () => {
         <div className="flex justify-center">
           <button className="p-1 border border-white">
             <div className="bg-white hover:bg-yelloww transition ease-linear">
-              <p className="uppercase font-semibold px-16 py-3 text-black">See All</p>
+              <p className="uppercase font-semibold px-16 py-3 text-black">
+                See All
+              </p>
             </div>
           </button>
         </div>
