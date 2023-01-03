@@ -1,49 +1,77 @@
-import { Modal } from 'antd'
+import { Modal, ConfigProvider } from 'antd'
 
+import { FaRegPlayCircle } from 'react-icons/fa'
 import { RxCross2 } from 'react-icons/rx'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import Triangle from './Triangle'
-// import Player from '../Player'
 
 import video from '../../videos/video.mp4'
 import poster_img from '../../images/video-player/preview.jpg'
 
 const VideoPlayer = () => {
-  const [modalOpen, setModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const videoRef = useRef(null)
+
+  const showModal = () => {
+    setIsModalOpen(true)
+    videoRef.current.play()
+  }
+  const handleOk = () => {
+    setIsModalOpen(false)
+  }
+  const handleCancel = () => {
+    videoRef.current.pause()
+    setIsModalOpen(false)
+  }
 
   return (
     <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
       <Triangle />
-      <div className="flex justify-center">
-        <h2 className="uppercase text-white text-4xl font-black">
-          Watch Our trailer on <span className="text-yelloww">youtube</span>
-        </h2>
-      </div>
-      <div className="flex justify-center" onClick={() => setModalOpen(true)}>
-        <div className="max-w-complete">
-          <video poster={poster_img} className="masking-image w-[100%]">
-            <source src={video} type="video/mp4" />
-          </video>
+      <div className='py-36'>
+        <div className="flex justify-center py-10">
+          <h2 className="uppercase text-white text-4xl font-black py-10">
+            Watch Our trailer on <span className="text-yelloww">youtube</span>
+          </h2>
         </div>
-        <Modal
-          centered
-          width={1100}
-          // destroyOnClose={true}
-          footer={null}
-          open={modalOpen}
-          closeIcon={<RxCross2 size={20} className="text-gray-500" />}
-          destroyOnClose={true}
-          onCancel={() => {
-            setModalOpen(false)
-            console.log('Qais')
+
+        <div className="flex justify-center">
+          <div onClick={showModal} className="max-w-complete relative">
+            <img src={poster_img} alt="" />
+            <div className="absolute flex justify-center w-full h-full top-0 items-center">
+              <FaRegPlayCircle size={100} className="text-white" />
+            </div>
+          </div>
+        </div>
+        <ConfigProvider
+          theme={{
+            token: {
+              colorBgBase: 'rgba(0, 0, 0, 0.5)',
+            },
           }}
         >
-          {/* <Player url={video} id={1} poster={poster_img} /> */}
-          <p>Qais</p>
-        </Modal>
+          <Modal
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            footer={null}
+            centered={true}
+            width={'1400px'}
+            closeIcon={<RxCross2 size={20} className="text-gray-500" />}
+          >
+            <video
+              poster={poster_img}
+              controls
+              ref={videoRef}
+              className="pt-5 px-5"
+            >
+              <source src={video} type="video/mp4" />
+            </video>
+          </Modal>
+        </ConfigProvider>
       </div>
+      <div className='border-t border-white/30 w-full'></div>
     </div>
   )
 }
