@@ -8,12 +8,16 @@ import RoadMap from "./components/RoadMap";
 import VideoPlayer from "./components/VideoPlayer";
 import './App.css';
 import CoreTeam from './components/CoreTeam';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 const App = () => {
   return (
     <div className='bgp'>
+      <Header/>
       <LandingSection />
       <AboutUs />
+      <CoreTeam/>
       <VideoPlayer />
       <CollectionCarousel />
       <Collection />
@@ -21,7 +25,9 @@ const App = () => {
       <RoadMap />
       <FAQ />
       <BlogArticle />
+      <Footer/>
       </div>
-) }
+)}
+
 
 export default App;
