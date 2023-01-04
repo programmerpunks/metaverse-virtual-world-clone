@@ -1,34 +1,136 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-
-          <div class="flex justify-center  bg-cyan-400">
-<div class="my-5 flex  items-center md:flex-row  ">
-    <div class=" h-full text-white p-10"> <span>
-            <h1 class="text-3xl font-semibold text-center mb-4 text-yellow-300">Contact Us</h1>
-            <p class="text-xs font-normal mt-2 text-center">Contact us by filling this contact form. </p>
-        </span>
-        <div class="mt-6 leading-7 text-center"> <input type="text" name="" placeholder="Full Name" id=""
-                class="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"/>
-            <input type="email" name="" placeholder="Email Address" id=""
-                class="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"/>
-            <input type="tel" name="phone" placeholder="Phone Number" id="phone"
-                class="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"/>
-            <textarea id="message" name="message" placeholder="Write us a message"
-                class="w-[80%] bg-cyan-400 border-2 border-white h-44 text-sm outline-none placeholder:text-white placeholder:opacity-80 py-1 px-2 mt-6 resize-none leading-6 duration-200 ease-in-out rounded-lg"></textarea>
-            <button
-                class="block m-auto w-[60%] md:w-[50%] text-center border bg-yellow-300 rounded-full py-1 mt-6 text-lg font-bold tracking-wide uppercase text-white brightness-105 hover:bg-yellow-400">Send</button>
+    <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
+      {/* <div className="my-5 flex  items-center md:flex-row  ">
+        <div className=" h-full text-white p-10">
+          {" "}
+          <span>
+            <h1 className="text-3xl font-semibold text-center mb-4 text-yellow-300">
+              Contact Us
+            </h1>
+            <p className="text-xs font-normal mt-2 text-center">
+              Contact us by filling this contact form.{" "}
+            </p>
+          </span>
+          <div className="mt-6 leading-7 text-center">
+            {" "}
+            <input
+              type="text"
+              name=""
+              placeholder="Full Name"
+              id=""
+              className="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"
+            />
+            <input
+              type="email"
+              name=""
+              placeholder="Email Address"
+              id=""
+              className="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              id="phone"
+              className="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write us a message"
+              className="w-[80%] bg-cyan-400 border-2 border-white h-44 text-sm outline-none placeholder:text-white placeholder:opacity-80 py-1 px-2 mt-6 resize-none leading-6 duration-200 ease-in-out rounded-lg"
+            ></textarea>
+            <button className="block m-auto w-[60%] md:w-[50%] text-center border bg-yellow-300 rounded-full py-1 mt-6 text-lg font-bold tracking-wide uppercase text-white brightness-105 hover:bg-yellow-400">
+              Send
+            </button>
+          </div>
         </div>
+      </div> */}
+
+      <div className="font-bold text-5xl text-white p-10 text-center">
+        {" "}
+        CONTACT US
+      </div>
+
+      <div className="flex w-full justify-center px-[5%] md:px-[10%] lg:px-[20%] ">
+        <div className="flex w-full flex-wrap md:flex-nowrap">
+          <div className="flex flex-col  p-4 w-full gap-7 ">
+            <div className="">
+              <p className="text-yelloww font-bold text-xl">Phone</p>
+              <p className="text-white text-xl">+1 300 1234567</p>
+            </div>
+            <div>
+              <p className="text-yelloww font-bold text-xl">EMAIL</p>
+              <p className="text-white text-xl">ProgrammerPunks@gmail.com</p>
+            </div>
+          </div>
+
+          <div className=" p-4 w-full">
+            <p className="text-yelloww font-bold text-xl">OFFICE</p>
+            <p className="text-white text-xl">
+              124 S Main St, Scottville, MI 49454, United States
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className=" flex flex-wrap  md:flex-nowrap px-[5%] md:px-[10%] lg:px-[20%]">
+        <div className="w-full md:w-1/2 p-4">
+          <input
+            type="text"
+            className="outline-none form-control block w-full px-3 py-4  placeholder:text-white bg-transparent border-2"
+            id="exampleFormControlInput1"
+            placeholder="Your Name*"
+          />
+        </div>
+        <div className="w-full md:w-1/2 p-4">
+          <input
+            type="text"
+            className="form-control block w-full px-3 py-4 outline-none  placeholder:text-white bg-transparent border-2"
+            id="exampleFormControlInput1"
+            placeholder="Your Email*"
+          />
+        </div>
+      </div>
+      <div className="px-[5%] md:px-[10%] lg:px-[20%]">
+        <div className="w-full p-4 flex">
+          <input
+            type="text"
+            className="form-control w-full px-3 pb-32 bg-transparent border-2 placeholder:text-white flex"
+            id="exampleFormControlInput1"
+            placeholder="Your Message*"
+          />
+        </div>
+        <div className="flex items-center mb-4 p-4">
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label
+            for="default-checkbox"
+            className="ml-2 text-white dark:text-gray-300"
+          >
+            I'm okay with getting emails and having that activity tracked to
+            improve my experience.
+          </label>
+        </div>
+        <div className="p-4">
+           <button className="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black" type="button">
+      <span className="absolute inset-0 bg-yelloww"></span>
+      <span className="absolute inset-0 flex justify-center items-center font-bold">
+        SEND MESSAGE
+      </span>
+      SEND MESSAGE
+    </button>
+        </div>
+
+      </div>
     </div>
-    {/* <div
-        class="border w-[70%] md:w-[40%] bg-gray-100 items-center flex flex-col justify-center leading-7 space-y-8 p-8 h-full">
-        <img src="" alt="" class=""/>
-    </div> */}
-</div>
-</div>
+  );
+};
 
-  )
-}
-
-export default Footer
+export default Footer;
