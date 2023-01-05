@@ -10,7 +10,7 @@ const CollapseComp = () => {
     <>
       {data.map((item, index) => {
         return (
-          <div className="bg-white/30 border-2 border-white text-2xl my-5 rounded-lg py-5">
+          <div className="bg-white/30 border-2 border-white text-2xl my-5 rounded-lg py-5" key={index}>
             <Collapse bordered={false} ghost={true}>
               <Panel
                 showArrow={false}
