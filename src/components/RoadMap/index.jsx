@@ -1,6 +1,8 @@
 import { Carousel } from 'antd'
 import data from './data'
 import MiniCarousel from './MiniCarousel'
+import RoadMapCarousel from './RoadMapCarousel'
+import {r_data} from './RoadMapData'
 
 const RoadMap = () => {
   return (
@@ -34,9 +36,15 @@ const RoadMap = () => {
           </Carousel>
           <div className="w-full bg-white h-5"></div>
         </div>
-      </div>
+        <div className='bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark flex justify-center py-40'>
+         <RoadMapCarousel
+            data={r_data} speed={2000} />
     </div>
-  )
-}
+      </div>
+      </div>
+)}
 
 export default RoadMap
+
+
+

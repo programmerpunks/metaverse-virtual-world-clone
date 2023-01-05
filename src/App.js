@@ -10,6 +10,8 @@ import './App.css';
 import CoreTeam from './components/CoreTeam';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Sponsor from './components/Sponsors';
+// import HeroCarousel from './components/HeroCarousel';
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
       <RoadMap />
       <FAQ />
       <BlogArticle />
+      <Sponsor />
+      <RoadMap/>
       <Footer/>
       </div>
 )}
