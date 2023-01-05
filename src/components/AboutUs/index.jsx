@@ -1,5 +1,6 @@
 import img from '../../images/about-us/nft_team.png'
 import Spikes from './Spikes'
+
 const AboutUs = () => {
   return (
     <div className="bg-yelloww px-5">
