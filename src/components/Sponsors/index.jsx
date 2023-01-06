@@ -4,10 +4,10 @@ import data from './SponsorData';
 
 const Sponsor = () => {
   return (
-    <div className='bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark px-64 py-20'>
-       <div className="text-center py-10">
+    <div className='bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark py-20'>
+       {/* <div className="text-center py-10">
         <p className='uppercase text-6xl font-black text-white'>OUR SPONSORS</p>
-      </div>
+      </div> */}
          <SponsorCarousel data={data} speed={2000} />
     </div>
   )

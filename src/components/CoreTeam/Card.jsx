@@ -3,8 +3,6 @@ import React from "react";
 import "./Border.css";
 const Card = ({ url, Name, post, description }) => {
   // console.log(url,name,post,description);
-
-
   return (
     <div className="relative w-[360px] h-max">
       <img src={url} alt='' />

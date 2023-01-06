@@ -1,15 +1,19 @@
-import pic1 from '../../images/team1.jpg';
-import pic2 from '../../images/team2.jpg';
-import pic3 from '../../images/team3.jpg';
-import pic4 from '../../images/team4.jpg';
-import pic5 from '../../images/team5.jpg';
-import pic6 from '../../images/team6.jpg';
+import pic1 from '../../images/roadmap1.png';
+import pic2 from '../../images/roadmap2.png';
+import pic3 from '../../images/roadmap3.png';
+import pic4 from '../../images/roadmap4.png';
+import pic5 from '../../images/roadmap5.png';
+import pic6 from '../../images/roadmap6.png';
+import pic7 from '../../images/roadmap7.png';
+import pic8 from '../../images/roadmap8.png';
+import pic9 from '../../images/roadmap9.png';
+import pic10 from '../../images/roadmap10.png';
 
 
 export const r_data = [
   {
     url: pic1,
-    Heading: 'AAMIR',
+    Heading: 'Mini Game Launch For Community',
     post:'CEO',
     description:"Fb-Tw-Be"
   },
@@ -43,29 +47,30 @@ export const r_data = [
     Date:'Javascript',
     description:"Fb-Tw-Be"
   },
-  // {
-  //   url: pic7,
-  //   Heading: 'QAIS',
-  //   Date:'Javascript',
-  //   description:"Fb-Tw-Be"
-  // },
-  // {
-  //   url: pic8,
-  //   Heading: 'QAIS',
-  //   Date:'Javascript',
-  //   description:"Fb-Tw-Be"
-  // },
-  // {
-  //   url: pic9,
-  //   Heading: 'QAIS',
-  //   Date:'Javascript',
-  //   description:"Fb-Tw-Be"
-  // },
-  // {
-  //   url: pic10,
-  //   Heading: 'QAIS',
-  //   Date:'Javascript',
-  //   description:"Fb-Tw-Be"
-  // },
+  {
+    url: pic7,
+    Heading: 'QAIS',
+    Date:'Javascript',
+    description:"Fb-Tw-Be"
+  },
+  {
+    url: pic8,
+    Heading: 'QAIS',
+    Date:'Javascript',
+    description:"Fb-Tw-Be"
+  },
+  {
+    url: pic9,
+    Heading: 'QAIS',
+    Date:'Javascript',
+    description:"Fb-Tw-Be"
+  },
+  {
+    url: pic10,
+    Heading: 'QAIS',
+    Date:'Javascript',
+    description:"Fb-Tw-Be"
+  },
 
 ]
+

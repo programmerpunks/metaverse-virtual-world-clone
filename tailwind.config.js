@@ -21,6 +21,10 @@ module.exports = {
         'blue-light': '#01a3f4',
         'dull-yellow': '#af8b1d',
       },
+      clipPath:
+      {
+        'clip-path': 'polygon(0 0,100% 0,92% 100%,8% 100%)',
+      }
     },
   },
   plugins: [],

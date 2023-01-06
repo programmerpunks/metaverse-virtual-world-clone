@@ -8,6 +8,7 @@ import RoadMap from "./components/RoadMap";
 import VideoPlayer from "./components/VideoPlayer";
 import './App.css';
 import CoreTeam from './components/CoreTeam';
+import Divider from './components/Divider';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Sponsor from './components/Sponsors';
@@ -28,6 +29,7 @@ const App = () => {
       <FAQ />
       <BlogArticle />
       <Sponsor />
+      <Divider/>
       <RoadMap/>
       <Footer/>
       </div>
