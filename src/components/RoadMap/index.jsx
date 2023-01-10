@@ -20,9 +20,9 @@ const RoadMap = () => {
           <Carousel
             autoplay={true}
             pauseOnHover={false}
-            autoplaySpeed={10000}
+            autoplaySpeed={3000}
             dots={false}
-            speed={3000}
+            speed={1000}
             slidesToShow={6}
             className="flex absolute -mb-8"
           >
