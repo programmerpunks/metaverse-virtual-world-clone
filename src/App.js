@@ -6,20 +6,34 @@ import FAQ from "./components/FAQ";
 import LandingSection from "./components/LandingSection";
 import RoadMap from "./components/RoadMap";
 import VideoPlayer from "./components/VideoPlayer";
+import './App.css';
+import CoreTeam from './components/CoreTeam';
+import Divider from './components/Divider';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Sponsor from './components/Sponsors';
+// import HeroCarousel from './components/HeroCarousel';
 
 const App = () => {
   return (
     <div className='bgp'>
+      <Header/>
       <LandingSection />
       <AboutUs />
+      <CoreTeam/>
       <VideoPlayer />
       <CollectionCarousel />
       <Collection />
+      <CoreTeam/>
       <RoadMap />
       <FAQ />
       <BlogArticle />
-    </div>
-  );
-}
+      <Sponsor />
+      <Divider/>
+      <RoadMap/>
+      <Footer/>
+      </div>
+)}
+
 
 export default App;
