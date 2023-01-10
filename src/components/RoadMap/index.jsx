@@ -34,6 +34,7 @@ const RoadMap = () => {
               )
             })}
           </Carousel>
+
           <div className="w-full bg-white h-5"></div>
         </div>
         <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark flex justify-center">
