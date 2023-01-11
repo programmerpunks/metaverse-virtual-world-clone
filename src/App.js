@@ -8,11 +8,9 @@ import RoadMap from "./components/RoadMap";
 import VideoPlayer from "./components/VideoPlayer";
 import './App.css';
 import CoreTeam from './components/CoreTeam';
-import Divider from './components/Divider';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Sponsor from './components/Sponsors';
-// import HeroCarousel from './components/HeroCarousel';
 
 const App = () => {
   return (
@@ -20,17 +18,15 @@ const App = () => {
       <Header/>
       <LandingSection />
       <AboutUs />
-      <CoreTeam/>
       <VideoPlayer />
       <CollectionCarousel />
       <Collection />
-      <CoreTeam/>
       <RoadMap />
+      <CoreTeam/>
       <FAQ />
       <BlogArticle />
       <Sponsor />
-      <Divider/>
-      <RoadMap/>
+      {/* <RoadMap/> */}
       <Footer/>
       </div>
 )}

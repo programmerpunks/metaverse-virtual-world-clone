@@ -1,3 +1,4 @@
+import DividerBlue from '../shared/DividerBlue'
 import CollapseComp from './CollapseComp'
 import Spikes from './Spikes'
 
@@ -8,6 +9,9 @@ const FAQ = () => {
         <Spikes />
         <div className="absolute top-[10%] w-full h-full items-center space-y-10">
           <div className="text-center">
+            <div className='pb-10'>
+            <DividerBlue />
+            </div>
             <h1 className="text-6xl font-black uppercase">FAQ</h1>
           </div>
           <div className="flex justify-center">

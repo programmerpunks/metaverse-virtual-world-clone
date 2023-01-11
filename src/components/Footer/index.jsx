@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react'
+import DividerYellow from '../shared/DividerYellow'
 
 const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
-      <div className="font-bold text-5xl text-white p-10 text-center">
-        {" "}
+      <DividerYellow />
+      <div className="font-black text-6xl text-white p-10 text-center">
+        {' '}
         CONTACT US
       </div>
 
@@ -90,7 +92,7 @@ const Footer = () => {
   </div>
 </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
