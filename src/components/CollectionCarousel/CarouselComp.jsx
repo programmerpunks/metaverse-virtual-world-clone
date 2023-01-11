@@ -15,7 +15,7 @@ const CarouselComp = ({ data, speed }) => {
         return (
           <div className="px-5 flex justify-center" key={index}>
             <div className="bg-white/20 border px-3 w-full h-full">
-              <img src={item.img} className="h-96 w-64" alt="" />
+              <img src={item.img} className="h-96 w-64 anm" alt="" />
             </div>
           </div>
         )
