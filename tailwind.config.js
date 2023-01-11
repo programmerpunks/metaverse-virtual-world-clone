@@ -3,7 +3,6 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  content: [ "./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
     extend: {
       screens: {
@@ -20,6 +19,9 @@ module.exports = {
         'blue-dark': '#024add',
         'blue-light': '#01a3f4',
         'dull-yellow': '#af8b1d',
+        'b-from' : '#0a47b2',
+        'b-via' : '#0a7abf',
+        'b-to'  : '#0a4cb2'
       },
       clipPath:
       {

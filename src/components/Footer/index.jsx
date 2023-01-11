@@ -3,53 +3,6 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
-      {/* <div className="my-5 flex  items-center md:flex-row  ">
-        <div className=" h-full text-white p-10">
-          {" "}
-          <span>
-            <h1 className="text-3xl font-semibold text-center mb-4 text-yellow-300">
-              Contact Us
-            </h1>
-            <p className="text-xs font-normal mt-2 text-center">
-              Contact us by filling this contact form.{" "}
-            </p>
-          </span>
-          <div className="mt-6 leading-7 text-center">
-            {" "}
-            <input
-              type="text"
-              name=""
-              placeholder="Full Name"
-              id=""
-              className="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"
-            />
-            <input
-              type="email"
-              name=""
-              placeholder="Email Address"
-              id=""
-              className="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              id="phone"
-              className="border-b-2 w-[80%] mb-4 p-1 border-b-white placeholder:text-white placeholder:opacity-80 text-sm bg-cyan-400 focus:outline-none"
-            />
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write us a message"
-              className="w-[80%] bg-cyan-400 border-2 border-white h-44 text-sm outline-none placeholder:text-white placeholder:opacity-80 py-1 px-2 mt-6 resize-none leading-6 duration-200 ease-in-out rounded-lg"
-            ></textarea>
-            <button className="block m-auto w-[60%] md:w-[50%] text-center border bg-yellow-300 rounded-full py-1 mt-6 text-lg font-bold tracking-wide uppercase text-white brightness-105 hover:bg-yellow-400">
-              Send
-            </button>
-          </div>
-        </div>
-      </div> */}
-
       <div className="font-bold text-5xl text-white p-10 text-center">
         {" "}
         CONTACT US
@@ -119,16 +72,23 @@ const Footer = () => {
           </label>
         </div>
         <div className="p-4">
-           <button className="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black" type="button">
-      <span className="absolute inset-0 bg-yelloww"></span>
-      <span className="absolute inset-0 flex justify-center items-center font-bold">
-        SEND MESSAGE
-      </span>
-      SEND MESSAGE
-    </button>
+          <button
+            className="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+            type="button"
+          >
+            <span className="absolute inset-0 bg-yelloww"></span>
+            <span className="absolute inset-0 flex justify-center items-center font-bold">
+              SEND MESSAGE
+            </span>
+            SEND MESSAGE
+          </button>
         </div>
-
       </div>
+      <footer class="bg-gray-200 text-center lg:text-left">
+  <div class="text-white text-center p-6 bg-gradient-to-r from-b-from via-b-via to-b-to ">
+       © 2021 Copyright: Designed and developed by PP
+  </div>
+</footer>
     </div>
   );
 };
