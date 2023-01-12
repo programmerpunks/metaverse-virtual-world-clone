@@ -9,6 +9,7 @@ import Triangle from './Triangle'
 
 import video from '../../videos/video.mp4'
 import poster_img from '../../images/video-player/preview.jpg'
+import DividerYellow from '../shared/DividerYellow'
 
 const VideoPlayer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -30,6 +31,7 @@ const VideoPlayer = () => {
     <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
       <Triangle />
       <div className='py-36'>
+      <DividerYellow />
         <div className="flex justify-center py-10">
           <h2 className="uppercase text-white text-4xl font-black py-10">
             Watch Our trailer on <span className="text-yelloww">youtube</span>

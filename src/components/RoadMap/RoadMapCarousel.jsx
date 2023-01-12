@@ -8,8 +8,8 @@ const RoadMapCarousel = ({ url }) => {
           <p className="text-yelloww text-2xl md:-rotate-90 md:flex md:gap-4"><span>PHASE </span><span> 01</span></p>
       </div>
 
-      <div className=" lg:w-80 lg:h-80 md:w-1/3 md:py-16 lg:py-10 lg:mx-10 md:h-full ">
-        <img src={url} alt="" />
+      <div className=" lg:w-80 lg:h-80 md:w-1/3 md:py-16 lg:py-10 lg:mx-10 md:h-full">
+        <img src={url} alt=""  className="anm"/>
       </div>
 
       <div className="p-8 flex flex-col justify-center lg:pr-[10%] pr-[5%] md:p-2 md:w-2/3">
