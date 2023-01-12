@@ -45,7 +45,7 @@ const RoadMap = () => {
 
             <div className="w-full bg-white h-5"></div>
           </div>
-          <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark flex justify-center">
+          <div className="flex justify-center">
             <div className="lg:max-w-[1300px] md:max-w-[800px] max-w-xs md:w-fit  lg:ml-80">
               <Carousel
                 autoplay={true}
