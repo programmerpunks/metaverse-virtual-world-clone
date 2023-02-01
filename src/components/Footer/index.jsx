@@ -1,12 +1,12 @@
-import React from 'react'
-import DividerYellow from '../shared/DividerYellow'
+import React from "react";
+import DividerYellow from "../shared/DividerYellow";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
+    <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark pt-5">
       <DividerYellow />
       <div className="font-black text-6xl text-white p-10 text-center">
-        {' '}
+        {" "}
         CONTACT US
       </div>
 
@@ -87,12 +87,12 @@ const Footer = () => {
         </div>
       </div>
       <footer class="bg-gray-200 text-center lg:text-left">
-  <div class="text-white text-center p-6 bg-gradient-to-r from-b-from via-b-via to-b-to ">
-       © 2021 Copyright: Designed and developed by PP
-  </div>
-</footer>
+        <div class="text-white text-center p-6 bg-gradient-to-r from-b-from via-b-via to-b-to ">
+          © 2021 Copyright: Designed and developed by PP
+        </div>
+      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

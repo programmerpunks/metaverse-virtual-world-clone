@@ -1,51 +1,66 @@
-import React from 'react'
-import pic from '../../images/logo.png'
-import './btn.css'
-const Header = () => {
-  document.addEventListener('DOMContentLoaded', function () {
+import { useNavigate } from "react-router-dom";
+import React from "react";
+
+import pic from "../../images/logo.png";
+import "./btn.css";
+const Header = ({
+  wallet,
+  logout,
+  disconnect,
+  setUserMintedAmount,
+  setMaxMintAmount,
+  setPrice,
+  setImages,
+  connection,
+  readContract,
+  getTokens,
+}) => {
+  const navigate = useNavigate();
+
+  document.addEventListener("DOMContentLoaded", function () {
     // open
-    const burger = document.querySelectorAll('.navbar-burger')
-    const menu = document.querySelectorAll('.navbar-menu')
+    const burger = document.querySelectorAll(".navbar-burger");
+    const menu = document.querySelectorAll(".navbar-menu");
 
     if (burger.length && menu.length) {
       for (var i = 0; i < burger.length; i++) {
-        burger[i].addEventListener('click', function () {
+        burger[i].addEventListener("click", function () {
           for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle('hidden')
+            menu[j].classList.toggle("hidden");
           }
-        })
+        });
       }
     }
 
     // close
-    const close = document.querySelectorAll('.navbar-close')
-    const backdrop = document.querySelectorAll('.navbar-backdrop')
+    const close = document.querySelectorAll(".navbar-close");
+    const backdrop = document.querySelectorAll(".navbar-backdrop");
 
     if (close.length) {
       for (i = 0; i < close.length; i++) {
-        close[i].addEventListener('click', function () {
+        close[i].addEventListener("click", function () {
           for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle('hidden')
+            menu[j].classList.toggle("hidden");
           }
-        })
+        });
       }
     }
 
     if (backdrop.length) {
       for (i = 0; i < backdrop.length; i++) {
-        backdrop[i].addEventListener('click', function () {
+        backdrop[i].addEventListener("click", function () {
           for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle('hidden')
+            menu[j].classList.toggle("hidden");
           }
-        })
+        });
       }
     }
-  })
+  });
   return (
     <div>
       <nav className=" relative px-4 py-4 flex justify-between items-center bg-blue-light">
-        <a className="text-3xl font-bold flex" href="/">
-          <img src={pic} alt="" className="" />
+        <a className="text-3xl font-bold flex">
+          <img src={pic} alt="" className="" onClick={() => navigate("/")} />
           <div className="border-spacing-y-2"></div>
           <div className="mx-10 mt-5">
             <p className="text-white font-bold text-sm"> MetaVerse</p>
@@ -66,7 +81,7 @@ const Header = () => {
         </div>
         <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
           <li>
-            {' '}
+            {" "}
             <button
               class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
               type="button"
@@ -80,7 +95,7 @@ const Header = () => {
           </li>
 
           <li>
-            {' '}
+            {" "}
             <button
               class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
               type="button"
@@ -132,12 +147,28 @@ const Header = () => {
             </button>
           </li>
         </ul>
-        <a
-          className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
-          href="/"
+        <button
+          onClick={async () => {
+            logout
+              ? (async function () {
+                  await disconnect();
+                  await setUserMintedAmount(0);
+                  await setMaxMintAmount("-");
+                  await setPrice("-");
+                  await setImages([]);
+                })()
+              : (async function () {
+                  await connection();
+                  await readContract();
+                  await getTokens();
+                })();
+          }}
+          className={`hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
+            logout ? "hover:before:content-['Disconnect:']" : ""
+          }`}
         >
-          CONNECT WALLET
-        </a>
+          {wallet}
+        </button>
       </nav>
       <div className="navbar-menu relative z-50 hidden">
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
@@ -209,18 +240,20 @@ const Header = () => {
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <a
+              <button
                 className="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-yelloww hover:bg-gray-100 rounded-xl"
-                href="/"
+                onClick={async () => {
+                  await connection();
+                }}
               >
                 CONNECT WALLET
-              </a>
+              </button>
             </div>
           </div>
         </nav>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
