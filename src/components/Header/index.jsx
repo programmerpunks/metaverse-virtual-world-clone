@@ -1,5 +1,5 @@
 import React from "react";
-import pic from '../../images/logo.png'
+import pic from '../../images/dev2.png'
 import './btn.css'
 const Header = () => {
   document.addEventListener('DOMContentLoaded', function() {
@@ -43,14 +43,14 @@ const Header = () => {
 });
   return (
     <div>
-<nav className=" relative px-4 py-4 flex justify-between items-center bg-blue-light" >
+<nav className=" relative px-4 py-4 flex justify-between items-center bg-gradient-to-l from-blue-700 via-blue-800 to-gray-900" >
 		<a className="text-3xl font-bold flex" href="/">
-			<img src={pic} alt="" className="" />
+			<img src={pic} alt="" className="w-[80px] ml-10" />
       <div className="border-spacing-y-2">
       </div>
-      <div className="mx-10 mt-5">
-      <p className="text-white font-bold text-sm"> MetaVerse</p>
-      <p className="text-white font-bold text-sm"> Punks</p>
+      <div className="mx-2 mt-5">
+      <p className="text-white font-bold text-sm"> Devsinc</p>
+      <p className="text-white font-bold text-sm"> NFTs</p>
       </div>
 
 		</a>

@@ -6,7 +6,7 @@ import {r_data} from './RoadMapData'
 
 const RoadMap = () => {
   return (
-    <div className="flex justify-center bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark text-white py-10">
+    <div className="flex justify-center bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 text-white py-10">
       <div className="max-w-complete">
         <div className="text-center space-y-5">
           <h1 className="text-6xl font-black">Road Map of Company</h1>

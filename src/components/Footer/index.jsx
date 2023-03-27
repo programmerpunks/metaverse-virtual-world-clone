@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
+    <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
       <div className="font-bold text-5xl text-white p-10 text-center">
         {" "}
         CONTACT US

@@ -5,7 +5,7 @@ import CarouselComp from "./CarouselComp"
 
 const CollectionCarousel = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
+    <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
       <div className="text-center py-10">
         <p className='uppercase text-6xl font-black text-white'>From Collection</p>
       </div>

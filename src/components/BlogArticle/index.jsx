@@ -5,7 +5,7 @@ import Triangle from './Triangle'
 
 const BlogArticle = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
+    <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
       <Triangle />
       <div className="flex justify-center">
         <div className="max-w-[1300px] text-center text-white">
