@@ -1,8 +1,9 @@
 import { Carousel } from 'antd'
-import data from './data'
+
 import CarouselComp from './CarouselComp'
-import Triangle from './Triangle'
+import data from '../../Content/BlogArticle'
 import DividerYellow from '../shared/DividerYellow'
+import Triangle from './Triangle'
 
 const BlogArticle = () => {
   return (

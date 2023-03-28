@@ -1,9 +1,9 @@
 import { Carousel } from 'antd'
-import data from './data'
+import data from '../../Content/RoadMap'
+import DividerYellow from '../shared/DividerYellow'
 import MiniCarousel from './MiniCarousel'
 import RoadMapCarousel from './RoadMapCarousel'
 import { r_data } from './RoadMapData'
-import DividerYellow from '../shared/DividerYellow'
 
 const RoadMap = () => {
   return (

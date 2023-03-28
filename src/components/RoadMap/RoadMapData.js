@@ -1,13 +1,13 @@
-import pic1 from '../../images/roadmap1.png';
-import pic2 from '../../images/roadmap2.png';
-import pic3 from '../../images/roadmap3.png';
-import pic4 from '../../images/roadmap4.png';
-import pic5 from '../../images/roadmap5.png';
-import pic6 from '../../images/roadmap6.png';
-import pic7 from '../../images/roadmap7.png';
-import pic8 from '../../images/roadmap8.png';
-import pic9 from '../../images/roadmap9.png';
-import pic10 from '../../images/roadmap10.png';
+import pic1 from '../../images/RoadMap/roadmap1.png';
+import pic2 from '../../images/RoadMap/roadmap2.png';
+import pic3 from '../../images/RoadMap/roadmap3.png';
+import pic4 from '../../images/RoadMap/roadmap4.png';
+import pic5 from '../../images/RoadMap/roadmap5.png';
+import pic6 from '../../images/RoadMap/roadmap6.png';
+import pic7 from '../../images/RoadMap/roadmap7.png';
+import pic8 from '../../images/RoadMap/roadmap8.png';
+import pic9 from '../../images/RoadMap/roadmap9.png';
+import pic10 from '../../images/RoadMap/roadmap10.png';
 
 
 export const r_data = [

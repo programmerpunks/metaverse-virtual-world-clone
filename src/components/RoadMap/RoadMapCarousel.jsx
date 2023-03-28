@@ -1,6 +1,4 @@
 import React from "react";
-// import { Carousel } from 'antd'
-// import pic from '../../images/roadmap2.png'
 const RoadMapCarousel = ({ url }) => {
   return (
     <div className="w-80 md:w-fit border bg-white/30 md:flex lg:h-96 lg:w-[65%]">

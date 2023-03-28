@@ -1,11 +1,11 @@
-import img from '../../images/about-us/nft_team.png'
 import Divider from '../shared/DividerBlue'
+import img from '../../images/about-us/nft_team.png'
 import Spikes from './Spikes'
 
 const AboutUs = () => {
   return (
     <div className="bg-yelloww px-5">
-      
+
       <div className='pb-10'>
         <Divider />
         </div>

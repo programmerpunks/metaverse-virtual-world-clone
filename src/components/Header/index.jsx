@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
-import pic from "../../images/logo.png";
+import pic from "../../images/Navbar/logo.png";
 import "./btn.css";
 const Header = ({
   wallet,
@@ -59,14 +59,14 @@ const Header = ({
   return (
     <div>
       <nav className=" relative px-4 py-4 flex justify-between items-center bg-blue-light">
-        <a className="text-3xl font-bold flex">
+        <button className="text-3xl font-bold flex">
           <img src={pic} alt="" className="" onClick={() => navigate("/")} />
           <div className="border-spacing-y-2"></div>
           <div className="mx-10 mt-5">
             <p className="text-white font-bold text-sm"> MetaVerse</p>
             <p className="text-white font-bold text-sm"> Punks</p>
           </div>
-        </a>
+        </button>
         <div className="lg:hidden">
           <button className="navbar-burger flex items-center text-blue-600 p-3">
             <svg

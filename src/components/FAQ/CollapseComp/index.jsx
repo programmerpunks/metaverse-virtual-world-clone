@@ -1,7 +1,7 @@
 import { Collapse } from 'antd'
 import Question from './Question'
 import Answer from './Answer'
-import data from '../data'
+import data from '../../../Content/FAQ'
 
 const CollapseComp = () => {
   const { Panel } = Collapse

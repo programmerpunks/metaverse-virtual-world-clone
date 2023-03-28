@@ -1,4 +1,3 @@
-import React from "react";
 import DividerYellow from "../shared/DividerYellow";
 
 const Footer = () => {
