@@ -58,118 +58,128 @@ const Header = ({
   });
   return (
     <div>
-      <nav className=" relative px-4 py-4 flex justify-between items-center bg-blue-light">
-        <button className="text-3xl font-bold flex">
-          <img src={pic} alt="" className="" onClick={() => navigate("/")} />
-          <div className="border-spacing-y-2"></div>
-          <div className="mx-10 mt-5">
-            <p className="text-white font-bold text-sm"> MetaVerse</p>
-            <p className="text-white font-bold text-sm"> Punks</p>
-          </div>
-        </button>
-        <div className="lg:hidden">
-          <button className="navbar-burger flex items-center text-blue-600 p-3">
-            <svg
-              className="block h-4 w-4 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
+      <div className="grid bg-blue-light">
+        <div className="">
+          <nav className=" relative flex  px-4 pt-4">
+            <button className="text-3xl font-bold flex ">
+              <img
+                src={pic}
+                alt=""
+                className=""
+                onClick={() => navigate("/")}
+              />
+              <div className="border-spacing-y-2"></div>
+              <div className="mx-3 mt-5 ">
+                <p className="text-white font-bold text-sm"> MetaVerse</p>
+                <p className="text-white font-bold text-sm"> Punks</p>
+              </div>
+            </button>
+            <div className="xl:hidden grid justify-end ml-auto">
+              <button className="navbar-burger  flex items-center text-blue-600 p-3">
+                <svg
+                  className="block h-4 w-4 fill-current"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+            <ul className=" hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 xl:flex xl:mx-auto xl:items-center xl:w-auto xl:space-x-6">
+              <li>
+                <button
+                  class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                  type="button"
+                >
+                  <span class="absolute inset-0 bg-yelloww"></span>
+                  <span class="absolute inset-0 flex justify-center items-center font-bold">
+                    HOME
+                  </span>
+                  HOME
+                </button>
+              </li>
+
+              <li>
+                <button
+                  class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                  type="button"
+                >
+                  <span class="absolute inset-0 bg-yelloww"></span>
+                  <span class="absolute inset-0 flex justify-center items-center font-bold">
+                    ABOUT
+                  </span>
+                  ABOUT
+                </button>
+              </li>
+              <li className="text-gray-300"></li>
+              <li>
+                <button
+                  className=" btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                  type="button"
+                >
+                  <span class="absolute inset-0 bg-yelloww"></span>
+                  <span class="absolute inset-0 flex justify-center items-center font-bold">
+                    COLLECTION
+                  </span>
+                  COLLECTION
+                </button>
+              </li>
+              <li className="text-gray-300"></li>
+              <li>
+                <button
+                  class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                  type="button"
+                >
+                  <span class="absolute inset-0 bg-yelloww"></span>
+                  <span class="absolute inset-0 flex justify-center items-center font-bold">
+                    TEAM
+                  </span>
+                  TEAM
+                </button>
+              </li>
+              <li className="text-gray-300"></li>
+              <li>
+                <button
+                  class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                  type="button"
+                >
+                  <span class="absolute inset-0 bg-yelloww"></span>
+                  <span class="absolute inset-0 flex justify-center items-center font-bold">
+                    CONTACT
+                  </span>
+                  CONTACT
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="grid pb-5 sm:justify-end justify-center ">
+          <button
+            onClick={async () => {
+              logout
+                ? (async function () {
+                    await disconnect();
+                    await setUserMintedAmount(0);
+                    await setMaxMintAmount("-");
+                    await setPrice("-");
+                    await setImages([]);
+                  })()
+                : (async function () {
+                    await connection();
+                    await readContract();
+                    await getTokens();
+                  })();
+            }}
+            className={` xl:inline-block h-12 xl:ml-auto sm:mr-5  px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
+              logout ? "hover:before:content-['Disconnect:']" : ""
+            }`}
+          >
+            {wallet}
           </button>
         </div>
-        <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
-          <li>
-            {" "}
-            <button
-              class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
-                HOME
-              </span>
-              HOME
-            </button>
-          </li>
+      </div>
 
-          <li>
-            {" "}
-            <button
-              class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
-                ABOUT
-              </span>
-              ABOUT
-            </button>
-          </li>
-          <li className="text-gray-300"></li>
-          <li>
-            <button
-              class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
-                COLLECTION
-              </span>
-              COLLECTION
-            </button>
-          </li>
-          <li className="text-gray-300"></li>
-          <li>
-            <button
-              class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
-                TEAM
-              </span>
-              TEAM
-            </button>
-          </li>
-          <li className="text-gray-300"></li>
-          <li>
-            <button
-              class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
-                CONTACT
-              </span>
-              CONTACT
-            </button>
-          </li>
-        </ul>
-        <button
-          onClick={async () => {
-            logout
-              ? (async function () {
-                  await disconnect();
-                  await setUserMintedAmount(0);
-                  await setMaxMintAmount("-");
-                  await setPrice("-");
-                  await setImages([]);
-                })()
-              : (async function () {
-                  await connection();
-                  await readContract();
-                  await getTokens();
-                })();
-          }}
-          className={`hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
-            logout ? "hover:before:content-['Disconnect:']" : ""
-          }`}
-        >
-          {wallet}
-        </button>
-      </nav>
       <div className="navbar-menu relative z-50 hidden">
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
         <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-blue-700 border-r overflow-y-auto">

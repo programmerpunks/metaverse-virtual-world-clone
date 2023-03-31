@@ -1,6 +1,6 @@
 const CarouselComp = ({ img, title, meta, desc }) => {
   return (
-    <div className="p-10">
+    <div className="p-10 ">
       <div className="p-8 border border-white/50">
         <div className="bg-white/20 border border-white/80">
           <img src={img} alt="" className="bg-cover w-full" />
@@ -19,7 +19,7 @@ const CarouselComp = ({ img, title, meta, desc }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CarouselComp
+export default CarouselComp;

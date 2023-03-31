@@ -1,14 +1,13 @@
-import Divider from '../shared/DividerBlue'
-import img from '../../images/about-us/nft_team.png'
-import Spikes from './Spikes'
+import Divider from "../shared/DividerBlue";
+import img from "../../images/about-us/nft_team.png";
+import Spikes from "./Spikes";
 
 const AboutUs = () => {
   return (
     <div className="bg-yelloww px-5">
-
-      <div className='pb-10'>
+      <div className="pb-10">
         <Divider />
-        </div>
+      </div>
       <div className="flex justify-center">
         <h1 className="uppercase text-7xl font-black">About Us</h1>
       </div>
@@ -28,14 +27,14 @@ const AboutUs = () => {
       </div>
       <div className="relative">
         <Spikes />
-        <div className="absolute w-full bottom-0">
+        <div className="absolute xl:my-[-30px] md:my-[-100px] sm:my-[-50px] w-full bottom-0">
           <div className="flex justify-center">
             <img src={img} alt="" />
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

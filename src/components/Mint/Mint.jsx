@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -80,55 +79,59 @@ function Mint({
 
   return (
     <>
-      <div className="text-white text-2xl text-center font-bold bg-blue-light pb-5 bg-opacity-80">
+      <div className="md:py-16 py-10 text-white md:text-2xl text-lg text-center font-bold bg-blue-light pb-5 bg-opacity-80">
         <div>
           Total minted: {userMintedAmount}/{maxMintAmount}
         </div>
         <div>The Price is {price}eth ETH + Gas Fee</div>
         <div className=" py-5 flex justify-center">
-          <div className="outline flex px-20 py-5">
-            <button
-              class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-              onClick={() => {
-                setAmount(amount - 1);
-              }}
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
-                -
-              </span>
-              -
-            </button>
-            <p className="px-10 mt-1">{amount}</p>
-            <button
-              class="btn2 px-5 py-0 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-              onClick={() => {
-                setAmount(amount + 1);
-              }}
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
-                +
-              </span>
-              +
-            </button>
-            <button
-              class="btn2 px-5 py-0 relative ml-20 text-white  uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
-              type="button"
-              onClick={async () => {
-                await mint(amount);
-                await readContract();
-                await getTokens();
-              }}
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
+          <div className="outline  md:px-20 px-10 py-5 ">
+            <div className="grid md:grid-cols-2 justify-center">
+              <div className="flex">
+                <button
+                  class="btn2 w-5  px-5 flex items-center justify-center py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                  type="button"
+                  onClick={() => {
+                    setAmount(amount - 1);
+                  }}
+                >
+                  <span class="absolute inset-0 bg-yelloww"></span>
+                  <span class="absolute inset-0 flex justify-center items-center font-bold">
+                    -
+                  </span>
+                  -
+                </button>
+                <p className="md:px-10 px-5 w-5 mt-1 mr-5">{amount}</p>
+                <button
+                  class="btn2 w-5 px-5 flex items-center justify-center relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                  type="button"
+                  onClick={() => {
+                    setAmount(amount + 1);
+                  }}
+                >
+                  <span class="absolute inset-0 bg-yelloww"></span>
+                  <span class="absolute inset-0 flex justify-center items-center font-bold">
+                    +
+                  </span>
+                  +
+                </button>
+              </div>
+              <button
+                class="btn2 md:px-5 py-0 flex items-center justify-center relative md:ml-20 md:mt-0 mt-10 text-white  uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
+                type="button"
+                onClick={async () => {
+                  await mint(amount);
+                  await readContract();
+                  await getTokens();
+                }}
+              >
+                <span class="absolute inset-0 bg-yelloww"></span>
+                <span class="absolute inset-0 flex justify-center items-center font-bold">
+                  Mint
+                </span>
                 Mint
-              </span>
-              Mint
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>

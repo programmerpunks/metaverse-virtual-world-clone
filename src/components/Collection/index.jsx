@@ -1,4 +1,4 @@
-import Spikes from './Spikes'
+import Spikes from "./Spikes";
 
 const Collection = () => {
   return (
@@ -7,7 +7,9 @@ const Collection = () => {
         <Spikes />
         <div className="absolute top-[20%] w-full h-full items-center space-y-10 text-white">
           <div className="flex justify-center">
-            <h1 className="text-9xl font-extrabold text-yelloww">10,000</h1>
+            <h1 className="md:text-9xl text-6xl font-extrabold text-yelloww">
+              10,000
+            </h1>
           </div>
           <div className="flex justify-center">
             <h4 className="text-3xl font-extrabold uppercase">
@@ -35,7 +37,7 @@ const Collection = () => {
       </div>
       <div className="h-[800px] bg-transparent"></div>
     </>
-  )
-}
+  );
+};
 
-export default Collection
+export default Collection;

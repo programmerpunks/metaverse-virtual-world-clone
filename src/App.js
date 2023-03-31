@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ethers } from "ethers";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
-import { ethers } from "ethers";
-import "react-toastify/dist/ReactToastify.css";
+import { useEffect, useState } from "react";
 
 import { ContractABI } from "../src/components/Mint/Contract";
 import AboutUs from "./components/AboutUs";
@@ -19,7 +19,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Sponsor from "./components/Sponsors";
 import Mint from "./components/Mint/Mint";
-import { useState } from "react";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [wallet, setWallet] = useState("Connect a Wallet");
@@ -116,8 +117,16 @@ const App = () => {
     });
     setTimeout(() => {
       setImages(imagesLocal);
-    }, [3000]);
+    }, [5000]);
   };
+  const initialFun = async () => {
+    await connection();
+    await readContract();
+    await getTokens();
+  };
+  useEffect(() => {
+    initialFun();
+  });
   return (
     <div className="bgp">
       <ToastContainer position="top-center" autoClose={2000} />
