@@ -1,16 +1,16 @@
-import DividerBlue from '../shared/DividerBlue'
-import CollapseComp from './CollapseComp'
-import Spikes from './Spikes'
+import DividerBlue from "../shared/DividerBlue";
+import CollapseComp from "./CollapseComp";
+import Spikes from "./Spikes";
 
 const FAQ = () => {
   return (
     <>
       <div className="bg-yelloww relative pt-20">
         <Spikes />
-        <div className="absolute top-[10%] w-full h-full items-center space-y-10">
+        <div className=" top-[10%] w-full h-full items-center space-y-10">
           <div className="text-center">
-            <div className='pb-10'>
-            <DividerBlue />
+            <div className="pb-10">
+              <DividerBlue />
             </div>
             <h1 className="text-6xl font-black uppercase">FAQ</h1>
           </div>
@@ -25,12 +25,12 @@ const FAQ = () => {
               brand's future looks like.
             </p>
           </div>
-          <div className="flex justify-center w-full">
-            <div className="flex max-w-complete w-full gap-10">
-              <div className="flex-1">
+          <div className="flex justify-center w-auto">
+            <div className="grid w-full px-20  xl:grid-cols-2 grid-cols-1  gap-10">
+              <div className="">
                 <CollapseComp />
               </div>
-              <div className="flex-1">
+              <div className="">
                 <CollapseComp />
               </div>
             </div>
@@ -38,7 +38,7 @@ const FAQ = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;

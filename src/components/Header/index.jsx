@@ -60,7 +60,7 @@ const Header = ({
     <div>
       <div className="grid bg-blue-light">
         <div className="">
-          <nav className=" relative flex  px-4 py-4">
+          <nav className=" relative flex  px-4 pt-4">
             <button className="text-3xl font-bold flex ">
               <img
                 src={pic}
