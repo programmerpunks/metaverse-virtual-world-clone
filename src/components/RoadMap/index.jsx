@@ -15,16 +15,18 @@ const RoadMap = () => {
       </div>
       <div className="flex justify-center bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark text-white py-10">
         <div className="max-w-complete">
-          <div className="text-center space-y-5 px-16 w-auto">
-            <h1 className="text-6xl font-black">Road Map of Company</h1>
-            <p className="text-lg font-light ">
+          <div className="text-center space-y-5 md:px-16 px-3 w-auto">
+            <h1 className="md:text-6xl sm:text-4xl text-3xl font-black">
+              Road Map of Company
+            </h1>
+            <p className="text-lg font-light px-5">
               Our mission is simple: We seek the truth and help people
               understand the world. This mission is rooted in our belief that
               great journalism has the power to make each reader’s life richer
               and more fulfilling, and all of society stronger and more just.
             </p>
           </div>
-          <div className="xl:block hidden   py-10 relative">
+          <div className="xxl:block hidden   py-10 relative">
             <Carousel
               autoplay={true}
               pauseOnHover={false}

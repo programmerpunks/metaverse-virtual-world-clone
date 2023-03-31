@@ -9,17 +9,17 @@ const AboutUs = () => {
         <Divider />
       </div>
       <div className="flex justify-center">
-        <h1 className="uppercase text-7xl font-black">About Us</h1>
+        <h1 className="uppercase sm:text-7xl text-3xl font-black">About Us</h1>
       </div>
       <div className="flex justify-center py-10 pb-20">
         <div className="max-w-complete flex w-full gap-10">
-          <p className="flex-1 text-lg">
+          <p className="flex-1 sm:text-lg text-sm">
             There are many variations of passages of lorem ipsum available, but
             the majority have suffered alteration in some form, by injected
             humour, or randomised words which don't look even slightly
             believable.
           </p>
-          <p className="flex-1 text-lg">
+          <p className="flex-1 sm:text-lg text-sm">
             If you are going to use a passage of Lorem Ipsum, you need to be
             sure there isn't anything embarrassing hidden in the middle of text.
           </p>

@@ -1,16 +1,19 @@
-import { Collapse } from 'antd'
-import Question from './Question'
-import Answer from './Answer'
-import data from '../../../Content/FAQ'
+import { Collapse } from "antd";
+import Question from "./Question";
+import Answer from "./Answer";
+import data from "../../../Content/FAQ";
 
 const CollapseComp = () => {
-  const { Panel } = Collapse
+  const { Panel } = Collapse;
 
   return (
     <>
       {data.map((item, index) => {
         return (
-          <div className="bg-white/30 border-2 border-white text-2xl my-5 rounded-lg py-5" key={index}>
+          <div
+            className="bg-white/30 border-2 border-black text-2xl my-5 rounded-lg py-5"
+            key={index}
+          >
             <Collapse bordered={false} ghost={true}>
               <Panel
                 showArrow={false}
@@ -20,10 +23,10 @@ const CollapseComp = () => {
               </Panel>
             </Collapse>
           </div>
-        )
+        );
       })}
     </>
-  )
-}
+  );
+};
 
-export default CollapseComp
+export default CollapseComp;

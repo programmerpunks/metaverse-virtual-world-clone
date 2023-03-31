@@ -1,8 +1,6 @@
-
-import { Carousel } from 'antd'
+import { Carousel } from "antd";
 
 const SponsorCarousel = ({ data, speed }) => {
-
   return (
     <Carousel
       autoplay={true}
@@ -13,19 +11,15 @@ const SponsorCarousel = ({ data, speed }) => {
       speed={speed}
       className="py-5"
     >
-
-      {data.map((item)=>{
+      {data.map((item) => {
         return (
-          <div className='m-5'>
-            <img className='w-52' src={item.url} alt="" />
+          <div className="m-5">
+            <img className="w-auto" src={item.url} alt="" />
           </div>
-        )
+        );
       })}
     </Carousel>
-  )
-}
-
-
+  );
+};
 
 export default SponsorCarousel;
-
