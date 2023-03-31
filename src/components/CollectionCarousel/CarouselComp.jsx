@@ -1,4 +1,4 @@
-import { Carousel } from 'antd'
+import { Carousel } from "antd";
 
 const CarouselComp = ({ data, speed }) => {
   return (
@@ -13,15 +13,15 @@ const CarouselComp = ({ data, speed }) => {
     >
       {data.map((item, index) => {
         return (
-          <div className="px-5 flex justify-center" key={index}>
+          <div className="px-5 overflow-hidden flex justify-center" key={index}>
             <div className="bg-white/20 border px-3 w-full h-full">
               <img src={item.img} className="h-96 w-64 anm" alt="" />
             </div>
           </div>
-        )
+        );
       })}
     </Carousel>
-  )
-}
+  );
+};
 
-export default CarouselComp
+export default CarouselComp;

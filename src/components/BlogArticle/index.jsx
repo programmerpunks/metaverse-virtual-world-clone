@@ -1,14 +1,15 @@
-import { Carousel } from 'antd'
-import data from './data'
-import CarouselComp from './CarouselComp'
-import Triangle from './Triangle'
-import DividerYellow from '../shared/DividerYellow'
+import { Carousel } from "antd";
+
+import CarouselComp from "./CarouselComp";
+import data from "../../Content/BlogArticle";
+import DividerYellow from "../shared/DividerYellow";
+import Triangle from "./Triangle";
 
 const BlogArticle = () => {
   return (
     <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
       <Triangle />
-      <div className='pt-10'>
+      <div className="pt-10">
         <DividerYellow />
       </div>
       <div className="flex justify-center">
@@ -26,9 +27,10 @@ const BlogArticle = () => {
             dots={false}
             autoplay={true}
             pauseOnHover={false}
-            slidesToShow={2}
+            slidesToShow={1}
+            className="hidden"
           >
-            {data.map((item, index) => {
+            {/* {data.map((item, index) => {
               return (
                 <CarouselComp
                   img={item.img}
@@ -37,16 +39,16 @@ const BlogArticle = () => {
                   meta={item.meta}
                   key={index}
                 />
-              )
-            })}
+              );
+            })} */}
           </Carousel>
-          <div className="flex justify-end pr-10 uppercase text-yelloww underline font-semibold">
+          <div className="flex  lg:justify-end justify-center pr-10 uppercase text-yelloww underline font-semibold">
             <a href="?">Read all blog posts</a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default BlogArticle
+export default BlogArticle;

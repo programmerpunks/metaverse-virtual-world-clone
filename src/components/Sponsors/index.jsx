@@ -1,6 +1,6 @@
 import React from 'react'
 import SponsorCarousel from './SponsorCarousel'
-import data from './SponsorData'
+import data from '../../Content/Sponsor'
 import Divider from '../shared/DividerYellow'
 
 const Sponsor = () => {

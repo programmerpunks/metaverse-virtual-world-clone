@@ -1,7 +1,7 @@
-import img1 from '../../images/blog-article/img1.jpg'
-import img2 from '../../images/blog-article/img2.jpg'
-import img3 from '../../images/blog-article/img3.jpg'
-import img4 from '../../images/blog-article/img4.jpg'
+import img1 from '../images/blog-article/img1.jpg'
+import img2 from '../images/blog-article/img2.jpg'
+import img3 from '../images/blog-article/img3.jpg'
+import img4 from '../images/blog-article/img4.jpg'
 
 const meta_data = 'August 09, 2022 / MetaVerse / 4 Comments'
 const title = 'Reasons Why People Use Discord'

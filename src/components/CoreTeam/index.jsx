@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import DividerYellow from '../shared/DividerYellow'
-import { Data } from './TeamData'
+import { Data } from '../../Content/CoreTeam'
 import Flash from './Flash'
 const CoreTeam = () => {
   return (

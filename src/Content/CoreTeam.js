@@ -1,9 +1,9 @@
-import pic1 from '../../images/team1.jpg';
-import pic2 from '../../images/team2.jpg';
-import pic3 from '../../images/team3.jpg';
-import pic4 from '../../images/team4.jpg';
-import pic5 from '../../images/team5.jpg';
-import pic6 from '../../images/team6.jpg';
+import pic1 from '../images/CoreTeam/team1.jpg';
+import pic2 from '../images/CoreTeam/team2.jpg';
+import pic3 from '../images/CoreTeam/team3.jpg';
+import pic4 from '../images/CoreTeam/team4.jpg';
+import pic5 from '../images/CoreTeam/team5.jpg';
+import pic6 from '../images/CoreTeam/team6.jpg';
 
 export const Data = [
   {

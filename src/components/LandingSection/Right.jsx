@@ -1,5 +1,5 @@
 import { Carousel } from 'antd'
-import data from './data'
+import data from '../../Content/LandingSection'
 import CarouselComp from './CarouselComp'
 
 const Right = () => {

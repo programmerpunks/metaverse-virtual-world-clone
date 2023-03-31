@@ -1,12 +1,10 @@
-import React from 'react'
-import DividerYellow from '../shared/DividerYellow'
+import DividerYellow from "../shared/DividerYellow";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-dark via-blue-light to-blue-dark">
+    <div className="bg-gradient-to-r md:text-xl text-[12px]  from-blue-dark via-blue-light to-blue-dark pt-5">
       <DividerYellow />
-      <div className="font-black text-6xl text-white p-10 text-center">
-        {' '}
+      <div className="font-black md:text-6xl text-3xl text-white p-10 text-center">
         CONTACT US
       </div>
 
@@ -14,18 +12,18 @@ const Footer = () => {
         <div className="flex w-full flex-wrap md:flex-nowrap">
           <div className="flex flex-col  p-4 w-full gap-7 ">
             <div className="">
-              <p className="text-yelloww font-bold text-xl">Phone</p>
-              <p className="text-white text-xl">+1 300 1234567</p>
+              <p className="text-yelloww font-bold ">Phone</p>
+              <p className="text-white ">+1 300 1234567</p>
             </div>
             <div>
-              <p className="text-yelloww font-bold text-xl">EMAIL</p>
-              <p className="text-white text-xl">ProgrammerPunks@gmail.com</p>
+              <p className="text-yelloww font-bold ">EMAIL</p>
+              <p className="text-white ">ProgrammerPunks@gmail.com</p>
             </div>
           </div>
 
           <div className=" p-4 w-full">
-            <p className="text-yelloww font-bold text-xl">OFFICE</p>
-            <p className="text-white text-xl">
+            <p className="text-yelloww font-bold ">OFFICE</p>
+            <p className="text-white ">
               124 S Main St, Scottville, MI 49454, United States
             </p>
           </div>
@@ -87,12 +85,12 @@ const Footer = () => {
         </div>
       </div>
       <footer class="bg-gray-200 text-center lg:text-left">
-  <div class="text-white text-center p-6 bg-gradient-to-r from-b-from via-b-via to-b-to ">
-       © 2021 Copyright: Designed and developed by PP
-  </div>
-</footer>
+        <div class="text-white text-center p-6 bg-gradient-to-r from-b-from via-b-via to-b-to ">
+          © 2021 Copyright: Designed and developed by PP
+        </div>
+      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

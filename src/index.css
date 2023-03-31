@@ -11,7 +11,7 @@
 .anm {
   --g: 8px;     /* the gap */
   --b: 6px;    /* border thickness*/
-  --c: #abe8ea; /* the color */
+  --c: #006cf9; /* the color */
 
 
   padding: calc(var(--g) + var(--b));

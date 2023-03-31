@@ -1,7 +1,7 @@
+import CarouselComp from "./CarouselComp"
 import data1 from './data1'
 import data2 from './data2'
 import data3 from './data3'
-import CarouselComp from "./CarouselComp"
 import DividerYellow from '../shared/DividerYellow'
 
 const CollectionCarousel = () => {
