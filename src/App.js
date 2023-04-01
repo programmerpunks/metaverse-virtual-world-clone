@@ -126,7 +126,7 @@ const App = () => {
   };
   useEffect(() => {
     initialFun();
-  });
+  }, []);
   return (
     <div className="bgp">
       <ToastContainer position="top-center" autoClose={2000} />

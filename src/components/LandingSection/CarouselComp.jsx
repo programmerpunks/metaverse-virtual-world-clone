@@ -3,7 +3,7 @@ const CarouselComp = ({ img, title }) => {
     <div className="p-10">
       <div className="p-8 border border-white/100">
         <div className="bg-white/100 flex justify-center border border-white/20 anm">
-          <img src={img} alt="" className="h-[690px] w-[550px]" />
+          <img src={img} alt="" className="h-auto w-auto" />
         </div>
       </div>
       <div className="text-center pt-10">

@@ -12,10 +12,12 @@ const FAQ = () => {
             <div className="pb-10">
               <DividerBlue />
             </div>
-            <h1 className="text-6xl font-black uppercase">FAQ</h1>
+            <h1 className="md:text-6xl sm:text-4xl text-3xl font-black uppercase">
+              FAQ
+            </h1>
           </div>
           <div className="flex justify-center">
-            <p className="max-w-complete text-center text-xl font-light">
+            <p className="max-w-complete text-center text-xl px-5 font-light">
               This is your chance to take your reader on a journey. What have
               you achieved along the way and what do you envision next?
               Developing a narrative is really quite simple if you follow a
@@ -26,7 +28,7 @@ const FAQ = () => {
             </p>
           </div>
           <div className="flex justify-center w-auto">
-            <div className="grid w-full px-20  xl:grid-cols-2 grid-cols-1  gap-10">
+            <div className="grid w-full md:px-20 sm:px-10 px-5  xl:grid-cols-2 grid-cols-1  gap-10">
               <div className="">
                 <CollapseComp />
               </div>

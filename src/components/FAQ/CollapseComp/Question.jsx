@@ -1,7 +1,7 @@
 const Question = ({ question }) => {
   return (
-    <div className="text-lg font-bold uppercase">{question}</div>
-  )
-}
+    <div className="sm:text-lg text-sm font-bold uppercase">{question}</div>
+  );
+};
 
-export default Question
+export default Question;

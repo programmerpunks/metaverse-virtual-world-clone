@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 import pic from "../../images/Navbar/logo.png";
 import "./btn.css";
@@ -16,6 +16,7 @@ const Header = ({
   getTokens,
 }) => {
   const navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
 
   document.addEventListener("DOMContentLoaded", function () {
     // open
@@ -75,7 +76,12 @@ const Header = ({
               </div>
             </button>
             <div className="xl:hidden grid justify-end ml-auto">
-              <button className="navbar-burger  flex items-center text-blue-600 p-3">
+              <button
+                className="navbar-burger  flex items-center text-blue-600 p-3"
+                onClick={() => {
+                  setShowMenu(!showMenu);
+                }}
+              >
                 <svg
                   className="block h-4 w-4 fill-current"
                   viewBox="0 0 20 20"
@@ -160,10 +166,6 @@ const Header = ({
               logout
                 ? (async function () {
                     await disconnect();
-                    await setUserMintedAmount(0);
-                    await setMaxMintAmount("-");
-                    await setPrice("-");
-                    await setImages([]);
                   })()
                 : (async function () {
                     await connection();
@@ -171,7 +173,7 @@ const Header = ({
                     await getTokens();
                   })();
             }}
-            className={` xl:inline-block h-12 xl:ml-auto sm:mr-5  px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
+            className={` xl:inline-block hidden xl:mt-[-38%] h-12 xl:ml-auto sm:mr-5  px-6 bg-yelloww hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
               logout ? "hover:before:content-['Disconnect:']" : ""
             }`}
           >
@@ -180,87 +182,108 @@ const Header = ({
         </div>
       </div>
 
-      <div className="navbar-menu relative z-50 hidden">
-        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-blue-700 border-r overflow-y-auto">
-          <div className="flex items-center mb-8">
-            <a className="mr-auto font-bold leading-none w-12" href="/">
-              <img src={pic} alt="" />
-            </a>
-            <button className="navbar-close">
-              <svg
-                className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div>
-            <ul>
-              <li className="mb-1">
-                <a
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-black rounded"
-                  href="/"
-                >
-                  HOME
-                </a>
-              </li>
-              <li className="mb-1">
-                <a
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-black rounded"
-                  href="/"
-                >
-                  ABOUT
-                </a>
-              </li>
-              <li className="mb-1">
-                <a
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-blue-600 rounded"
-                  href="/"
-                >
-                  COLLECTION
-                </a>
-              </li>
-              <li className="mb-1">
-                <a
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-blue-600 rounded"
-                  href="/"
-                >
-                  TEAM
-                </a>
-              </li>
-              <li className="mb-1">
-                <a
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-blue-600 rounded"
-                  href="/"
-                >
-                  CONTACT
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="mt-auto">
-            <div className="pt-6">
+      <div className="xl:hidden ">
+        <div
+          className={`navbar-menu relative z-50 ${
+            showMenu ? "block" : "hidden"
+          }`}
+        >
+          <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+          <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-blue-700 border-r overflow-y-auto">
+            <div className="flex items-center mb-8">
+              <a className="mr-auto font-bold leading-none w-12" href="/">
+                <img src={pic} alt="" />
+              </a>
               <button
-                className="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-yelloww hover:bg-gray-100 rounded-xl"
-                onClick={async () => {
-                  await connection();
+                className="navbar-close"
+                onClick={() => {
+                  setShowMenu(!showMenu);
                 }}
               >
-                CONNECT WALLET
+                <svg
+                  className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
               </button>
             </div>
-          </div>
-        </nav>
+            <div>
+              <ul>
+                <li className="mb-1">
+                  <a
+                    className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-black rounded"
+                    href="/"
+                  >
+                    HOME
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-black rounded"
+                    href="/"
+                  >
+                    ABOUT
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-blue-600 rounded"
+                    href="/"
+                  >
+                    COLLECTION
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-blue-600 rounded"
+                    href="/"
+                  >
+                    TEAM
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="block p-4 text-sm font-semibold text-gray-400 hover:bg-yelloww hover:text-blue-600 rounded"
+                    href="/"
+                  >
+                    CONTACT
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-auto">
+              <div className="pt-6">
+                <button
+                  onClick={async () => {
+                    logout
+                      ? (async function () {
+                          await disconnect();
+                        })()
+                      : (async function () {
+                          await connection();
+                          await readContract();
+                          await getTokens();
+                        })();
+                  }}
+                  className={` xl:inline-block h-12 xl:ml-auto sm:mr-5  px-6 bg-yelloww hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
+                    logout ? "hover:before:content-['Disconnect:']" : ""
+                  }`}
+                >
+                  {wallet}
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   );

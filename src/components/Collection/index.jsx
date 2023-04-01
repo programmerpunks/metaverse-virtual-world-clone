@@ -12,12 +12,12 @@ const Collection = () => {
             </h1>
           </div>
           <div className="flex justify-center">
-            <h4 className="text-3xl font-extrabold uppercase">
+            <h4 className="md:text-3xl text-center text-2xl font-extrabold uppercase">
               Total Items in Collection
             </h4>
           </div>
           <div className="flex justify-center">
-            <p className="w-[700px] text-center">
+            <p className="w-auto text-center px-5">
               There are many variations of passages of lorem ipsum available,
               but the majority have suffered alteration in some form, by
               injected humour, or randomised words which don't look even
