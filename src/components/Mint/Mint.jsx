@@ -68,14 +68,6 @@ function Mint({
       });
     }
   });
-  const initialFun = async () => {
-    await connection();
-    await readContract();
-    await getTokens();
-  };
-  useEffect(() => {
-    initialFun();
-  });
 
   return (
     <>

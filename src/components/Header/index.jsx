@@ -61,8 +61,8 @@ const Header = ({
     <div>
       <div className="grid bg-blue-light">
         <div className="">
-          <nav className=" relative flex  px-4 pt-4">
-            <button className="text-3xl font-bold flex ">
+          <nav className=" relative  xl:mr-48  flex  px-4 pt-4">
+            <button className=" text-3xl font-bold flex ">
               <img
                 src={pic}
                 alt=""
@@ -75,7 +75,7 @@ const Header = ({
                 <p className="text-white font-bold text-sm"> Punks</p>
               </div>
             </button>
-            <div className="xl:hidden grid justify-end ml-auto">
+            <div className="xl:hidden  grid justify-end ml-auto">
               <button
                 className="navbar-burger  flex items-center text-blue-600 p-3"
                 onClick={() => {
@@ -92,7 +92,7 @@ const Header = ({
                 </svg>
               </button>
             </div>
-            <ul className=" hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 xl:flex xl:mx-auto xl:items-center xl:w-auto xl:space-x-6">
+            <ul className=" hidden  pl-48 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 xl:flex xl:mx-auto xl:items-center xl:w-auto xl:space-x-6">
               <li>
                 <button
                   class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-black"
@@ -173,7 +173,7 @@ const Header = ({
                     await getTokens();
                   })();
             }}
-            className={` xl:inline-block hidden xl:mt-[-38%] h-12 xl:ml-auto sm:mr-5  px-6 bg-yelloww hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
+            className={` xl:inline-block hidden xl:mt-[-70px] h-12 xl:ml-auto sm:mr-5  px-6 bg-yelloww hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
               logout ? "hover:before:content-['Disconnect:']" : ""
             }`}
           >
